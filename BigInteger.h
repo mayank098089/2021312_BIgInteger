@@ -1,3 +1,6 @@
+#ifndef BIGINTEGER_H
+#define BIGINTEGER_H
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -44,4 +47,4 @@ void ternate(struct BigInteger dev);
 void dumpling(struct BigInteger c);
 
 struct BigInteger mod(struct BigInteger a , struct BigInteger b);
-//struct BigInteger mod_sub(struct BigInteger a , struct BigInteger b);
+#endif 
