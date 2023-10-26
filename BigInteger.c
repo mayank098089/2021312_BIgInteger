@@ -751,21 +751,21 @@ void divide_alan(struct node *p1, struct node *p2, struct node *p3, int *l)
 void div_subtract(struct node *n1, struct node *n2, struct node *n3)
 {
     struct node *ptr = n2;
-    int num, c = 0; // Change "carry" to "c"
+    int num, c = 0; 
     sign_re(n2);
 
     while (n2)
     {
-        n1->data = n1->data + n2->data + c; // Change "carry" to "c"
+        n1->data = n1->data + n2->data + c; 
 
         if (n1->data < 0)
         {
             n1->data = n1->data + 10;
-            c = -1; // Change "carry" to "c"
+            c = -1; 
         }
         else
         {
-            c = 0; // Change "carry" to "c"
+            c = 0; 
         }
 
         n1 = n1->next;
@@ -773,17 +773,17 @@ void div_subtract(struct node *n1, struct node *n2, struct node *n3)
     }
     while (n1)
     {
-        n1->data = n1->data + c; // Change "carry" to "c"
+        n1->data = n1->data + c; 
         if (n1->data < 0)
         {
             n1->data = n1->data + 10;
-            c = -1; // Change "carry" to "c"
+            c = -1; 
         }
         else
         {
-            c = 0; // Change "carry" to "c"
+            c = 0; 
         }
-        if (c == 0) // Change "carry" to "c"
+        if (c == 0) 
         {
             break;
         }
@@ -791,20 +791,20 @@ void div_subtract(struct node *n1, struct node *n2, struct node *n3)
     }
     sign_re(ptr);
 
-    c = -1; // Change "carry" to "c"
+    c = -1; 
     while (n3)
     {
-        n3->data = n3->data + c; // Change "carry" to "c"
+        n3->data = n3->data + c; 
         if (n3->data < 0)
         {
             n3->data += 10;
-            c = -1; // Change "carry" to "c"
+            c = -1; 
         }
         else
         {
-            c = 0; // Change "carry" to "c"
+            c = 0; 
         }
-        if (c == 0) // Change "carry" to "c"
+        if (c == 0) 
         {
             return;
         }
