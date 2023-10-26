@@ -2,11 +2,11 @@
 
 
 
-void sign_rev(struct node *head)
+void sign_re(struct node *head)
 {
     if(head==0)return;
     head->data *= -1;
-    sign_rev(head->next);
+    sign_re(head->next);
 }
 struct node* reverse13(struct node *head)
 {
@@ -193,7 +193,7 @@ struct BigInteger add_m(struct BigInteger a1, struct BigInteger b1, int sign)
     result.length = a1.length;
     struct node *head = 0, *p1 = a1.l, *p2 = b1.l, *t, *itr;
     int number, c = 0;
-    sign_rev(p2);
+    sign_re(p2);
 
     while (p2)
     {
@@ -261,7 +261,7 @@ struct BigInteger add_m(struct BigInteger a1, struct BigInteger b1, int sign)
         p1 = p1->next;
     }
     result.l = head;
-    sign_rev(b1.l);
+    sign_re(b1.l);
     ternate(result);
     return result;
 }
@@ -752,7 +752,7 @@ void div_subtract(struct node *n1, struct node *n2, struct node *n3)
 {
     struct node *ptr = n2;
     int num, c = 0; // Change "carry" to "c"
-    sign_rev(n2);
+    sign_re(n2);
 
     while (n2)
     {
@@ -789,7 +789,7 @@ void div_subtract(struct node *n1, struct node *n2, struct node *n3)
         }
         n1 = n1->next;
     }
-    sign_rev(ptr);
+    sign_re(ptr);
 
     c = -1; // Change "carry" to "c"
     while (n3)
